@@ -1,281 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Slim IPTV</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLIM IPTV</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #000;
-        color: #fff;
-    }
+        header {
+            text-align: center;
+            padding: 30px 10px;
+        }
 
-    /* MENU */
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 25px;
-        background: #0d0d0d;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
+        header img {
+            width: 180px;
+        }
 
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .logo span {
-        color: #ff6a00;
-    }
+        h1, h2 {
+            text-align: center;
+        }
 
-    nav a {
-        color: #fff;
-        margin-left: 18px;
-        text-decoration: none;
-        font-size: 16px;
-        transition: 0.2s;
-    }
-    nav a:hover {
-        color: #ff6a00;
-    }
+        .btn-container {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-    /* BANNER */
-    .hero {
-        padding: 45px 25px;
-        background: radial-gradient(circle at top, #1a1a1a, #000);
-    }
-    .hero h1 {
-        font-size: 42px;
-        font-weight: bold;
-        margin: 0 0 15px 0;
-    }
-    .hero p {
-        font-size: 18px;
-        color: #d0d0d0;
-        max-width: 350px;
-        margin-top: 10px;
-    }
+        .btn {
+            background: #ffcc00;
+            padding: 14px 28px;
+            border-radius: 10px;
+            color: #000;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s;
+        }
 
-    .btns {
-        margin-top: 25px;
-        display: flex;
-        gap: 15px;
-    }
+        .btn:hover {
+            background: #e6b800;
+            transform: scale(1.06);
+        }
 
-    .btn {
-        padding: 14px 25px;
-        border-radius: 10px;
-        font-size: 18px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-    }
+        .apps-section {
+            padding: 20px;
+        }
 
-    .btn-orange {
-        background: linear-gradient(to right, #ff6a00, #ff4000);
-        color: #fff;
-    }
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
-    .btn-dark {
-        background: #1c1c1c;
-        color: #fff;
-        border: 1px solid #444;
-    }
+        .app-card {
+            background: #111;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
 
-    /* VIDEO */
-    .video-card {
-        margin: 25px;
-        background: #111;
-        padding: 25px;
-        border-radius: 20px;
-        text-align: center;
-    }
-    .video-btn {
-        width: 85px;
-        height: 85px;
-        background: #ff3c00;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-    .video-btn span {
-        font-size: 45px;
-        margin-left: 5px;
-    }
+        .app-card:hover {
+            transform: scale(1.05);
+            background: #222;
+        }
 
-    /* TÍTULOS DAS SEÇÕES */
-    h2 {
-        text-align: center;
-        margin-top: 40px;
-        font-size: 30px;
-    }
+        .app-card img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
 
-    /* PLANOS */
-    .planos {
-        padding: 20px;
-    }
-    .plano {
-        background: #111;
-        padding: 25px;
-        margin: 20px auto;
-        border-radius: 15px;
-        max-width: 380px;
-        text-align: center;
-        border: 1px solid #222;
-    }
-    .plano h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    .plano p {
-        color: #ccc;
-    }
-    .price {
-        margin: 15px 0;
-        font-size: 32px;
-        font-weight: bold;
-        color: #ff6a00;
-    }
-
-    /* APPS */
-    .apps {
-        padding: 20px;
-    }
-    .app-card {
-        background: #111;
-        padding: 25px;
-        margin: 20px auto;
-        border-radius: 15px;
-        max-width: 380px;
-        text-align: center;
-    }
-    .app-card img {
-        width: 90px;
-        margin-bottom: 15px;
-    }
-    .app-card h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-
-    /* RODAPÉ */
-    footer {
-        margin-top: 50px;
-        padding: 25px;
-        text-align: center;
-        background: #0d0d0d;
-        color: #aaa;
-        font-size: 14px;
-    }
-</style>
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- MENU -->
-<nav>
-    <div class="logo">Slim <span>IPTV</span></div>
-    <div>
-        <a href="#home">Início</a>
-        <a href="#planos">Planos IPTV</a>
-        <a href="#teste">Teste Grátis</a>
-        <a href="#apps">Aplicativos</a>
-    </div>
-</nav>
+    <!-- LOGO -->
+    <header>
+        <img src="logo.png" alt="SLIM IPTV" />
+        <h1>SLIM IPTV</h1>
+        <p>O melhor do entretenimento na palma da mão</p>
+    </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <h1>Streaming ilimitado em alta qualidade</h1>
-    <p>Mais de 10.000 canais, filmes e séries — Teste grátis e atendimento via WhatsApp.</p>
-
-    <div class="btns">
-        <a href="#planos" class="btn btn-orange">Ver Planos</a>
-        <a href="https://wa.me/5599999999999" class="btn btn-dark">Fale no WhatsApp</a>
-    </div>
-</section>
-
-<!-- VÍDEO -->
-<div class="video-card">
-    <div class="video-btn">
-        <span>▶</span>
-    </div>
-</div>
-
-<!-- PLANOS IPTV -->
-<h2 id="planos">Planos IPTV</h2>
-
-<div class="planos">
-
-    <div class="plano">
-        <h3>Mensal</h3>
-        <p>1 conexão • Qualidade HD • Suporte 24h</p>
-        <div class="price">R$ 25</div>
-        <a href="https://wa.me/5599999999999" class="btn btn-orange">Assinar Agora</a>
+    <!-- BOTÃO DO WHATSAPP -->
+    <div class="btn-container">
+        <a href="https://wa.me/5591992462980" class="btn">Fale no WhatsApp</a>
     </div>
 
-    <div class="plano">
-        <h3>Trimestral</h3>
-        <p>1 conexão • Qualidade HD+ • Suporte VIP</p>
-        <div class="price">R$ 60</div>
-        <a href="https://wa.me/5599999999999" class="btn btn-orange">Assinar Agora</a>
+    <!-- SEÇÃO APLICATIVOS -->
+    <section class="apps-section">
+        <h2>Aplicativos Compatíveis</h2>
+
+        <div class="apps-grid">
+
+            <div class="app-card">
+                <img src="xciptv.png" alt="XCIPTV">
+                <p>XCIPTV</p>
+            </div>
+
+            <div class="app-card">
+                <img src="iptvsmart.png" alt="IPTV Smarters">
+                <p>IPTV Smarters Player</p>
+            </div>
+
+            <div class="app-card">
+                <img src="absolutetv.png" alt="Absoluto TV">
+                <p>Absoluto TV</p>
+            </div>
+
+            <div class="app-card">
+                <img src="slimsmart.png" alt="Slim Smart">
+                <p>Slim Smart</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SUPORTE -->
+    <div class="btn-container">
+        <a href="https://wa.me/5591992462980" class="btn">Suporte Técnico</a>
     </div>
 
-    <div class="plano">
-        <h3>Anual</h3>
-        <p>1 conexão • Full HD • Suporte Premium</p>
-        <div class="price">R$ 150</div>
-        <a href="https://wa.me/5599999999999" class="btn btn-orange">Assinar Agora</a>
-    </div>
-
-</div>
-
-<!-- TESTE GRÁTIS -->
-<h2 id="teste">Teste Grátis</h2>
-
-<div class="planos">
-    <div class="plano">
-        <h3>Teste 1h</h3>
-        <p>Teste sem compromisso • Qualidade HD</p>
-        <a href="https://wa.me/5599999999999" class="btn btn-dark">Solicitar Teste</a>
-    </div>
-</div>
-
-<!-- APLICATIVOS -->
-<h2 id="apps">Aplicativos Compatíveis</h2>
-
-<div class="apps">
-
-    <div class="app-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Android_logo.png">
-        <h3>XCIPTV Player</h3>
-        <a class="btn btn-orange" href="#">Baixar</a>
-    </div>
-
-    <div class="app-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Android_logo.png">
-        <h3>IPTV Smarters Player</h3>
-        <a class="btn btn-orange" href="#">Baixar</a>
-    </div>
-
-    <div class="app-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Android_logo.png">
-        <h3>Downloader (PlayStore)</h3>
-        <a class="btn btn-orange" href="#">Instalar</a>
-    </div>
-
-</div>
-
-<!-- RODAPÉ -->
-<footer>
-    © 2025 Slim IPTV – Todos os direitos reservados.
-</footer>
+    <footer>
+        © 2025 SLIM IPTV — Todos os direitos reservados.
+    </footer>
 
 </body>
 </html>
