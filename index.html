@@ -1,38 +1,115 @@
-<!-- Seção: Aplicativos Compatíveis -->
-<section id="apps" style="padding: 60px 20px; text-align: center; background: #f7f7f7;">
-    <h2 style="font-size: 32px; margin-bottom: 30px; color: #333;">
-        Aplicativos Compatíveis
-    </h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slim IPTV</title>
 
-    <p style="color:#555; margin-bottom: 40px;">
-        Utilize sua lista IPTV nos principais aplicativos do mercado.
-    </p>
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+        header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ff6a00;
+        }
 
-        <!-- XCIPTV -->
-        <div style="width: 180px;">
-            <img src="img/xciptv.png" alt="XCIPTV" style="width: 100%; border-radius: 10px;">
-            <h3 style="margin-top: 10px;">XCIPTV</h3>
+        header img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        .card {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            background: #ff6a00;
+            border-radius: 12px;
+            padding: 12px 25px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        img.icon {
+            width: 120px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Slim IPTV">
+        <h1>Slim IPTV</h1>
+    </header>
+
+    <section>
+        <h2>Aplicativos Compatíveis</h2>
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <h3>Absoluto Player / Easy Player</h3>
+            <img class="icon" src="img/absoluto.png" alt="Absoluto Player">
+            <a class="btn" href="#">Baixar</a>
         </div>
 
-        <!-- IPTV Smarters Player -->
-        <div style="width: 180px;">
-            <img src="img/iptvsmarters.png" alt="IPTV Smarters" style="width: 100%; border-radius: 10px;">
-            <h3 style="margin-top: 10px;">IPTV Smarters Player</h3>
+        <!-- CARD 2 -->
+        <div class="card">
+            <h3>Downloader (PlayStore)</h3>
+            <img class="icon" src="img/downloader.png" alt="Downloader">
+            <a class="btn" href="#">Instalar</a>
         </div>
 
-        <!-- Absolut IPTV -->
-        <div style="width: 180px;">
-            <img src="img/absolut.png" alt="Absolut IPTV" style="width: 100%; border-radius: 10px;">
-            <h3 style="margin-top: 10px;">Absolut</h3>
+        <!-- CARD 3 -->
+        <div class="card">
+            <h3>Smarters Player</h3>
+            <img class="icon" src="img/smarters.png" alt="Smarters Player">
+            <a class="btn" href="#">Baixar</a>
         </div>
 
-        <!-- Slim Smart -->
-        <div style="width: 180px;">
-            <img src="img/slimsmart.png" alt="Slim Smart" style="width: 100%; border-radius: 10px;">
-            <h3 style="margin-top: 10px;">Slim Smart</h3>
+        <!-- CARD 4 -->
+        <div class="card">
+            <h3>XCIPTV Player</h3>
+            <img class="icon" src="img/xciptv.png" alt="XCIPTV">
+            <a class="btn" href="#">Baixar</a>
         </div>
 
-    </div>
-</section>
+    </section>
+
+</body>
+</html>
