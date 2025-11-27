@@ -3,235 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slim IPTV</title>
+    <title>Slim IPTV - A Melhor Experiência IPTV</title>
 
+    <!-- SEO -->
+    <meta name="description" content="Slim IPTV - Canais, Filmes e Séries em Full HD, estabilidade máxima e suporte rápido.">
+    <meta name="keywords" content="iptv, slim iptv, tv online, canais, filmes, séries, lista iptv">
+    <meta name="author" content="Slim IPTV">
+
+    <!-- Estilo -->
     <style>
         body {
             margin: 0;
-            background: #000;
-            color: #fff;
             font-family: Arial, sans-serif;
+            background: #0f1f0f;
+            color: #fff;
         }
 
-        /* MENU */
         header {
-            background: #0d0d0d;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #111;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .logo {
-            font-size: 20px;
+            background: #0b350b;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 26px;
             font-weight: bold;
+            letter-spacing: 2px;
+            border-bottom: 4px solid #e00000;
         }
 
-        .logo span {
-            color: #ff6600;
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #0b350b, #062306);
         }
 
-        nav a {
-            margin-left: 20px;
-            color: #ddd;
-            text-decoration: none;
-            font-size: 15px;
+        .hero h1 {
+            font-size: 42px;
+            font-weight: bold;
+            color: #e00000;
         }
 
-        nav a:hover {
-            color: #ff6600;
-        }
-
-        /* BANNER */
-        .banner {
-            padding: 40px 20px;
-            text-align: left;
-            background: linear-gradient(to bottom, #0d0d0d, #000);
-        }
-
-        .banner h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .banner p {
-            color: #ccc;
-            font-size: 16px;
-            margin-bottom: 20px;
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
         }
 
         .btn {
             display: inline-block;
-            padding: 10px 18px;
-            border-radius: 6px;
+            margin-top: 20px;
+            background: #e00000;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
             text-decoration: none;
-            font-size: 15px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        .btn-orange {
-            background: #ff6600;
-            color: #fff;
+        .btn:hover {
+            background: #b50000;
         }
 
-        .btn-wa {
-            background: #222;
-            color: #fff;
+        .section {
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        /* PLANOS */
-        h2 {
+        .apps img {
+            width: 110px;
+            margin: 15px;
+            border-radius: 12px;
+            border: 3px solid #e00000;
+        }
+
+        footer {
+            background: #0b350b;
+            padding: 30px;
             text-align: center;
             margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 26px;
+            border-top: 4px solid #e00000;
         }
 
-        .planos {
-            max-width: 700px;
-            margin: auto;
-            padding: 20px;
+        /* Botão Flutuante WhatsApp */
+        .zap-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 12px #000;
+            z-index: 999;
         }
 
-        .card {
-            background: #111;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .card h3 {
-            margin: 0;
-            font-size: 22px;
-        }
-
-        .valor {
-            font-size: 26px;
-            margin: 10px 0;
-            color: #ff6600;
-        }
-
-        /* APLICATIVOS */
-        .apps {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            max-width: 700px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .app-box {
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .app-img {
-            height: 80px;
-            background: #222;
-            margin-bottom: 10px;
-            border-radius: 8px;
+        .zap-float img {
+            width: 40px;
         }
     </style>
 </head>
 <body>
 
-    <!-- MENU -->
-    <header>
-        <div class="logo">Slim <span>IPTV</span></div>
+<header>
+    SLIM IPTV
+</header>
 
-        <nav>
-            <a href="#planos">Planos IPTV</a>
-            <a href="#teste">Teste Grátis</a>
-            <a href="#apps">Aplicativos</a>
-        </nav>
-    </header>
+<section class="hero">
+    <h1>A Melhor Plataforma IPTV</h1>
+    <p>Canais, filmes e séries com qualidade máxima e estabilidade garantida.</p>
 
-    <!-- BANNER -->
-    <section class="banner">
-        <h1>Streaming ilimitado em alta qualidade</h1>
-        <p>Mais de 10.000 canais, filmes e séries — teste grátis e suporte rápido via WhatsApp.</p>
+    <a class="btn" href="https://wa.me/5591992462980?text=Quero%20assinar%20a%20Slim%20IPTV">Assinar Agora</a>
+    <br>
+    <a class="btn" href="teste.html">Solicitar Teste</a>
+</section>
 
-        <a href="#planos" class="btn btn-orange">Ver Planos</a>
-
-        <a href="https://wa.me/5591992462980" class="btn btn-wa">
-            Fale no WhatsApp
-        </a>
-    </section>
-
-    <!-- PLANOS -->
-    <h2 id="planos">Planos IPTV</h2>
-
-    <div class="planos">
-
-        <div class="card">
-            <h3>Mensal</h3>
-            <p>1 conexão • HD • Suporte 24h</p>
-            <div class="valor">R$ 25</div>
-            <a href="https://wa.me/5591992462980?text=Olá,%20quero%20assinar%20o%20plano%20Mensal" class="btn btn-orange">Assinar Agora</a>
-        </div>
-
-        <div class="card">
-            <h3>Trimestral</h3>
-            <p>1 conexão • HD+ • Suporte VIP</p>
-            <div class="valor">R$ 60</div>
-            <a href="https://wa.me/5591992462980?text=Olá,%20quero%20assinar%20o%20plano%20Trimestral" class="btn btn-orange">Assinar Agora</a>
-        </div>
-
-        <div class="card">
-            <h3>Anual</h3>
-            <p>1 conexão • Full HD • Suporte Premium</p>
-            <div class="valor">R$ 150</div>
-            <a href="https://wa.me/5591992462980?text=Olá,%20quero%20assinar%20o%20plano%20Anual" class="btn btn-orange">Assinar Agora</a>
-        </div>
-
-    </div>
-
-    <!-- TESTE GRÁTIS -->
-    <h2 id="teste">Teste Grátis</h2>
-
-    <div class="planos">
-        <div class="card">
-            <h3>Teste 1h</h3>
-            <p>Teste sem compromisso • Qualidade HD</p>
-
-            <a href="https://wa.me/5591992462980?text=Olá,%20quero%20solicitar%20um%20teste%20grátis" class="btn btn-orange">
-                Solicitar Teste
-            </a>
-        </div>
-    </div>
-
-    <!-- APLICATIVOS -->
-    <h2 id="apps">Aplicativos Compatíveis</h2>
+<section class="section">
+    <h2>Aplicativos Compatíveis</h2>
 
     <div class="apps">
-        <div class="app-box">
-            <div class="app-img"></div>
-            <p>XCIPTV</p>
-        </div>
-
-        <div class="app-box">
-            <div class="app-img"></div>
-            <p>IPTV Smarters</p>
-        </div>
-
-        <div class="app-box">
-            <div class="app-img"></div>
-            <p>Absoluto TV</p>
-        </div>
-
-        <div class="app-box">
-            <div class="app-img"></div>
-            <p>Slim Smart</p>
-        </div>
+        <img src="https://i.imgur.com/fkT5Ec7.png">
+        <img src="https://i.imgur.com/KuHlV9E.png">
+        <img src="https://i.imgur.com/AvmXjC7.png">
+        <img src="https://i.imgur.com/y5WmQqN.png">
     </div>
+</section>
+
+<footer>
+    © 2025 Slim IPTV - Todos os direitos reservados.
+</footer>
+
+<a class="zap-float" href="https://wa.me/5591992462980?text=Olá,%20quero%20informações%20sobre%20a%20Slim%20IPTV">
+    <img src="https://i.imgur.com/4Ycl7kG.png">
+</a>
 
 </body>
 </html>
