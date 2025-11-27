@@ -1,105 +1,49 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slim IPTV</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0d0d0d;
-            color: white;
-            text-align: center;
-        }
-
-        h2 {
-            margin-top: 20px;
-            font-size: 26px;
-            letter-spacing: 1px;
-        }
-
-        .apps-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            width: 90%;
-            margin: auto;
-        }
-
-        .app-card {
-            background: #1a1a1a;
-            padding: 15px;
-            border-radius: 12px;
-            transition: 0.3s;
-            box-shadow: 0 0 10px #000;
-        }
-
-        .app-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #ff6600;
-        }
-
-        .app-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .btn-download {
-            display: inline-block;
-            background: #ff6600;
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 8px;
-            margin-top: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-download:hover {
-            background: #ff4500;
-        }
-    </style>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Slim IPTV - Apps Compatíveis</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-    <h2>Aplicativos Compatíveis</h2>
+<h1 style="text-align:center;">Aplicativos Compatíveis</h1>
 
-    <div class="apps-container">
+<div class="app-list" style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+">
 
-        <!-- XCIPTV -->
-        <div class="app-card">
-            <img src="assets/img/images (13).jpeg" alt="XCIPTV Logo" />
-            <h3>XCIPTV Player</h3>
-            <a class="btn-download" href="#">Baixar</a>
-        </div>
-
-        <!-- IPTV Smarters -->
-        <div class="app-card">
-            <img src="assets/img/smarters-iptv-pro-lo..." alt="IPTV Smarters" />
-            <h3>IPTV Smarters</h3>
-            <a class="btn-download" href="#">Baixar</a>
-        </div>
-
-        <!-- Downloader -->
-        <div class="app-card">
-            <img src="assets/img/690acb4a22c95_d..." alt="Downloader App" />
-            <h3>Downloader</h3>
-            <a class="btn-download" href="#">Baixar</a>
-        </div>
-
-        <!-- Absoluto + Easy Player -->  
-        <div class="app-card">
-            <img src="assets/img/apps.png" alt="Absoluto e Easy Player" />
-            <h3>Absoluto Player & Easy Player</h3>
-            <a class="btn-download" href="#">Baixar</a>
-        </div>
-
+    <!-- XCIPTV -->
+    <div class="app-item">
+        <img src="assets/img/assets/images (13).jpeg" alt="XCIPTV" style="width:100%; border-radius:10px;" />
+        <p>XCIPTV Player</p>
     </div>
 
+    <!-- IPTV Smarters -->
+    <div class="app-item">
+        <img src="assets/img/assets/smarters-iptv-pro-logo.png" alt="IPTV Smarters" style="width:100%; border-radius:10px;" />
+        <p>IPTV Smarters</p>
+    </div>
+
+    <!-- Absoluto Player / Easy Player -->
+    <div class="app-item">
+        <img src="assets/img/assets/apps.png" alt="Player Absoluto" style="width:100%; border-radius:10px;" />
+        <p>Player Absoluto / Easy Player</p>
+    </div>
+
+    <!-- Downloader -->
+    <div class="app-item">
+        <img src="assets/img/assets/690acb4a22c95_download.jpg" alt="Downloader" style="width:100%; border-radius:10px;" />
+        <p>Downloader</p>
+    </div>
+
+</div>
+
 </body>
-</html>
+</html>  
