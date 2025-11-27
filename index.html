@@ -1,111 +1,105 @@
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slim IPTV</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .app-card {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #000;
+        }
+
+        .app-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ff6600;
+        }
+
+        .app-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: #ff6600;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-download:hover {
+            background: #ff4500;
+        }
+    </style>
+
 </head>
 <body>
-  <section id="apps" class="apps-section">
+
     <h2>Aplicativos Compatíveis</h2>
 
     <div class="apps-container">
 
         <!-- XCIPTV -->
         <div class="app-card">
-            <img src="assets/img/apps.png" alt="XCIPTV Player">
-            <p>XCIPTV Player</p>
+            <img src="assets/img/images (13).jpeg" alt="XCIPTV Logo" />
+            <h3>XCIPTV Player</h3>
+            <a class="btn-download" href="#">Baixar</a>
         </div>
 
         <!-- IPTV Smarters -->
         <div class="app-card">
-            <img src="assets/img/smarters-iptv-pro-lo..." alt="IPTV Smarters Player">
-            <p>IPTV Smarters</p>
+            <img src="assets/img/smarters-iptv-pro-lo..." alt="IPTV Smarters" />
+            <h3>IPTV Smarters</h3>
+            <a class="btn-download" href="#">Baixar</a>
         </div>
 
-        <!-- Player Absoluto (sua imagem images (13).jpeg) -->
+        <!-- Downloader -->
         <div class="app-card">
-            <img src="assets/img/images (13).jpeg" alt="Player Absoluto">
-            <p>Player Absoluto</p>
+            <img src="assets/img/690acb4a22c95_d..." alt="Downloader App" />
+            <h3>Downloader</h3>
+            <a class="btn-download" href="#">Baixar</a>
         </div>
 
-        <!-- Slim Smart (sua imagem 690acb4a...) -->
+        <!-- Absoluto + Easy Player -->  
         <div class="app-card">
-            <img src="assets/img/690acb4a22c95_d..." alt="Slim Smart">
-            <p>Slim Smart</p>
+            <img src="assets/img/apps.png" alt="Absoluto e Easy Player" />
+            <h3>Absoluto Player & Easy Player</h3>
+            <a class="btn-download" href="#">Baixar</a>
         </div>
 
     </div>
-</section>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <img src="assets/img/logo-slim.png" alt="Slim IPTV" class="logo" />
-      <h1 class="site-title">Slim IPTV</h1>
-    </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h2>Assista aos melhores canais em um único lugar</h2>
-      <p>Compatível com vários players — escolha o que preferir e siga o passo a passo de instalação.</p>
-      <a class="cta" href="#apps">VER APLICATIVOS</a>
-    </div>
-  </section>
-
-  <!-- APPS -->
-  <section id="apps" class="apps-section">
-    <div class="container">
-      <h3>Aplicativos Compatíveis</h3>
-      <p class="lead">Toque em um app para ver as instruções de instalação.</p>
-
-      <div class="apps-grid">
-
-        <article class="app-card">
-          <img src="assets/img/downloader.jpg" alt="Downloader" class="app-img">
-          <h4>Downloader</h4>
-          <button class="btn" data-app="Downloader">Como instalar</button>
-        </article>
-
-        <article class="app-card">
-          <img src="assets/img/iptv-smarters.jpg" alt="IPTV Smarters" class="app-img">
-          <h4>IPTV Smarters</h4>
-          <button class="btn" data-app="IPTV Smarters">Como instalar</button>
-        </article>
-
-        <article class="app-card">
-          <img src="assets/img/absoluto-player.jpg" alt="Absoluto Player" class="app-img">
-          <h4>Absoluto Player</h4>
-          <button class="btn" data-app="Absoluto Player">Como instalar</button>
-        </article>
-
-        <article class="app-card">
-          <img src="assets/img/xciptv.jpg" alt="XCIPTV" class="app-img">
-          <h4>XCIPTV Player</h4>
-          <button class="btn" data-app="XCIPTV">Como instalar</button>
-        </article>
-
-      </div>
-
-      <div class="note">Dica: coloque suas imagens reais dentro de <code>assets/img/</code> com os nomes acima.</div>
-    </div>
-  </section>
-
-  <!-- SUPPORT -->
-  <section id="support" class="support">
-    <div class="container">
-      <h3>Suporte</h3>
-      <p>Tem dúvida? Entre em contato pelo WhatsApp ou e-mail.</p>
-      <a class="btn ghost" href="mailto:suporte@slimiptv.com">suporte@slimiptv.com</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">© 2025 Slim IPTV — Todos os direitos reservados</div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
